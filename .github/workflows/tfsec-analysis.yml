@@ -31,11 +31,6 @@ jobs:
         with:
           sarif_file: tfsec.sarif
           args: --var-file=settings.tfvars
-          
-      - name: tfsec
-        uses: tfsec/tfsec-pr-commenter-action@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
